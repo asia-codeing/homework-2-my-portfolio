@@ -8,12 +8,11 @@
     --text-color2:rgb(255, 241, 220);
     --shadow:rgb(22, 100, 20);
     --shadow2:rgb(198, 240, 10);
-
-
 }
 body{
     background-color:var(--gray);
 }
+/*phone size*/
 header{
     background-color:var(--white);
     width:100%;
@@ -55,7 +54,7 @@ header nav ul li a{
         line-height: 30px;
         text-align: left;
         padding: 1px 35px 12px 43px;
-        border-right: 3px solid var(--text-color1);
+        border-right: 3px solid var(--text-color1);/*making border line on the right side*/
         float: left;
     }
     header nav ul{
@@ -145,6 +144,7 @@ header nav ul li a{
     padding: 10px 0px;
 
 }
+/*desktop size*/
 @media screen and (min-width: 992px){
     .about-me{
         width: 100%;
@@ -165,6 +165,7 @@ header nav ul li a{
         padding: 30px 0px;
     }
 }
+/*iPad size*/
 @media screen and (min-width: 768px){
     .about-me{
         width: 100%;
@@ -198,7 +199,7 @@ header nav ul li a{
     color: var(--text-color1);
 
 }
-
+/*first wbsite*/
 .first{
     background-color:var(--white);
    
@@ -250,6 +251,7 @@ h5{
         
     } 
 }
+/*other websites*/
 section{
     margin:7px 0px;
     background-color:var(--gray);
@@ -303,8 +305,11 @@ section{
         padding: 2px;
     }  
 }
-
+footer{
+    clear: both;
+}
 .contact a{
+
     font-family: inherit;
     font-size: 16px;
     padding: 10px 0px;
@@ -321,7 +326,7 @@ section{
     font-family: monospace;
     font-size: 30px;
     text-align:center;
-    padding: 10px 0px;
+    padding: 30px 0px;
     color: var(--text-color1);
 }
 @media screen and (min-width: 992px){
