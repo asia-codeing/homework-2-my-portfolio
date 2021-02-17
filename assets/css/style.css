@@ -1,24 +1,25 @@
-*{
-    text-decoration: none;
-}
-:root{/*Identify th variables*/
+/*Identify th variables*/
+:root{
     --white:#fdfdfd;
     --gray:#d6d8d2;
     --text-color1:rgb(15, 43, 2);
     --text-color2:rgb(255, 241, 220);
     --shadow:rgb(22, 100, 20);
     --shadow2:rgb(198, 240, 10);
+    --color: #636b53;
 }
 body{
     background-color:var(--gray);
+    border: solid var(--text-color1);
 }
+
 /*phone size*/
 header{
     background-color:var(--white);
     width:100%;
-    height: 100px;
-    
+    height: 100px;  
 }
+/*my logo*/
 header .logo{
     font-family: monospace;
     font-size: 30px;
@@ -29,6 +30,7 @@ header .logo{
     text-align: center;
     padding: 10px 0px;
 }
+/*header links*/
 header nav ul{
     width: fit-content;
     margin: 0 auto;
@@ -60,13 +62,14 @@ header nav ul li a{
     header nav ul{
         width: fit-content;
         margin: 0px 20px;
-        float: left;;
+        float: left;
     }
     header nav ul li a{
         font-size: 20px;
         line-height: 60px;
     }  
 }
+
 /*iPad size*/
 @media screen and (min-width: 768px){
     header{
@@ -91,10 +94,10 @@ header nav ul li a{
         line-height: 60px;
     }  
 }
+/*phone size*/
 /*Cover picture*/
 .cover{
     width: 100%;
-    height: calc(211vh - 900px);/*calculate 100vh-100px; means the height of this element is equal to 100% of the viewport height - the total hieght*/
     margin: 0px;
     background-image: url(../images/cover.png) ;
     background-position: center;
@@ -109,6 +112,7 @@ header nav ul li a{
     text-align: left;
     text-shadow: 2px 2px 8px var(--text-color1);
     line-height: 24px;
+    display: block;
 }
 /*cover style when it became on the desktop size*/
 @media screen and (min-width: 992px){
@@ -121,13 +125,12 @@ header nav ul li a{
 /*iPad size*/
 @media screen and (min-width: 768px){
     .cover h2{
-        display: block;
         font-size: 50px;
         padding: 300px 29px;
         line-height: 70px;
     }
 }
-
+/*phone size*/
 /*about me*/
 .about-me{
     background-color:var(--white);
@@ -142,7 +145,12 @@ header nav ul li a{
     font-size: 30px;
     text-align:center;
     padding: 10px 0px;
-
+}
+.about-me p {
+    font-size: 16px;
+    text-align: left;
+    padding: 8px 2px;
+    line-height: 25px;
 }
 /*desktop size*/
 @media screen and (min-width: 992px){
@@ -150,7 +158,6 @@ header nav ul li a{
         width: 100%;
         margin:8px 0px;
         padding: 5px;
-    
     }
     .about-me h3{
         font-family: monospace;
@@ -161,7 +168,6 @@ header nav ul li a{
     }
     .about-me p{
         font-size: 20px;
-        text-align:center;
         padding: 30px 0px;
     }
 }
@@ -182,16 +188,16 @@ header nav ul li a{
     }
     .about-me p{
         font-size: 20px;
-        text-align:center;
         padding: 30px 15px;
         line-height: 30px;
 
     }
 }
-
+/*phone size*/
+/*my projects*/
 #work h3{
     width: 100%;
-    background-color: #fff;
+    background-color:var(--white) ;
     font-family: monospace;
     font-size: 30px;
     text-align:center;
@@ -202,6 +208,7 @@ header nav ul li a{
 /*first wbsite*/
 .first{
     background-color:var(--white);
+    margin: 2px 0px;
    
     
 }
@@ -214,12 +221,14 @@ header nav ul li a{
     
 } 
 h5{
+    background-color:var(--white) ;
     color: var(--text-color1);
     padding: 10px 10px;
     text-align:left;
-    margin:0px 5px;
+    margin: -6px 0px 0px;
 
 }
+/*desktop size*/
 @media screen and (min-width: 992px){
     #work h3{
         font-size: 40px;
@@ -230,13 +239,13 @@ h5{
     }
     .first-web{
         width: 100%;
-        height: 550px;
+        height: 650px;
         margin:2px 0px;
         padding: 16px 51;
         
-    } 
-   
+    }   
 }
+/*ipad size*/
 @media screen and (min-width: 768px){
     #work h3{
         font-size: 40px;
@@ -246,100 +255,127 @@ h5{
     }
     .first-web{
         width: 100%;
-        height: 310px;
+        height: 500px;
         margin:2px 0px;
         
     } 
 }
+/*phone size*/
 /*other websites*/
-section{
-    margin:7px 0px;
-    background-color:var(--gray);
+.other-app{
+    grid-column-gap: 5px;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(100px, auto));
+    grid-template-rows:minmax(100px, auto) ;
+    background-color:var(--white);
+    margin-top:5px ;
 
 }
 .other{
     background-color:var(--white);
-    margin: 0px;
-    float:left;
-    width: 49%;
+    margin: 2px 0px;
+    width: 100%;
     border-radius: 1px;
-    box-shadow: 2px 2px 8px var(--text-color1);;
+    box-shadow: 2px 2px 8px var(--text-color1);
+    grid-column: 1/2;
     
 }
 .other1{
-
-    background-color:var(--white);
-    margin: 0px;
-    float:right;
-    width: 49%;
+    margin: 2px 0px;
+    width: 100%;
     border-radius: 1px;
-    box-shadow: 2px 2px 8px var(--text-color1);;
+    box-shadow: 2px 2px 8px var(--text-color1);
+    grid-column: 2/3;
     
 }
 .other-webs{
     width: 100%;
     height: 185px;
     margin:0px;
-    padding: 15px;
+    padding: 4px;
+    background-color:var(--white);
 }
+/*desktop size*/
 @media screen and (min-width: 992px){
     .other{
-        clear: both;
         box-shadow: 2px 2px 8px var(--text-color1);
         margin:2px 0px;
         padding: 16px;
             
-    } 
-        
+    }  
     .other1{
-        width: 50%;
         box-shadow: 2px 2px 8px var(--text-color1);
         margin:2px 0px;
-        padding: 16px;
-      
+        padding: 16px;  
     }
     .other-webs{
         width: 100%;
-        height: 300px;
+        height: 400px;
         margin:17px 2px;
-        padding: 2px;
+        padding: 0px;
+        
     }  
 }
-footer{
-    clear: both;
+ /*ipad size*/        
+@media screen and (min-width: 768px){
+     .other{
+        box-shadow: 2px 2px 8px var(--text-color1);
+        margin:2px 0px;
+        padding: 16px;
+            
+    }  
+    .other1{
+        box-shadow: 2px 2px 8px var(--text-color1);
+        margin:2px 0px;
+        padding: 16px;  
+    }
+    .other-webs{
+        width: 100%;
+        height: 380px;
+        margin:17px 2px;
+        padding: 2px;
+        
+    }  
 }
-.contact a{
+/*phone size*/
+/*contact me*/
+.contact{
+    margin-top:5px ;
+}
 
-    font-family: inherit;
-    font-size: 16px;
-    padding: 10px 0px;
-    color: var(--text-color1); 
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    
-}
 .contact h4{
+
     background-color:var(--white);
     justify-content: center;
     align-items: baseline;
     font-family: monospace;
     font-size: 30px;
     text-align:center;
-    padding: 30px 0px;
+    padding: 20px 0px;
     color: var(--text-color1);
 }
+.contact ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color:var(--white);
+    text-align:center;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
+.contact ul li{
+    display: inline-block;
+    padding: 0 10px;
+    list-style: none;
+}
+.contact ul li a{
+   
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--text-color1);
+}
+/*desktop size */
 @media screen and (min-width: 992px){
-    .contact a{
-        font-size: 25px;
-        padding: 10px 0px;
-        color: var(--text-color1); 
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-       
-        
-    }
     .contact h4{
         background-color:var(--white);
         justify-content: center;
@@ -348,9 +384,44 @@ footer{
         text-align:center;
         padding: 20px 0px;
     }
+    .contact ul li a{
+        font-size: 22px;
+        padding: 10px 0px;
+        color: var(--text-color1); 
+        flex-direction: row;
+        justify-content: center;
+         
+    }
 }
+/*phone size*/
+/*footer*/
+footer{
+    margin-top: 5px;
+    background-color: var(--white);
+    color: var(--color);
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    font-family: monospace;
+}
+footer p {
+    color: var(--gray);
+    line-height: 24px;
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 24px;
+    padding: 10px;
 
-
+}
+/*desktop size */
+@media screen and (min-width: 992px){
+  footer{
+    font-size: 25px;
+  } 
+  footer p {  
+    font-size: 18px;
+  }
+}
 
 
 
