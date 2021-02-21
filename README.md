@@ -13,5 +13,7 @@ Professional Portfolio
 
 # Link to deployed application:
 
+https://asia-codeing.github.io/homework-2-my-portfolio/
+
 
 
